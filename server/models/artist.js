@@ -10,4 +10,4 @@ const artistSchema = new Schema ({
     age: Number
 });
 
-module.exports = mongoose.model('artist', artistSchema, 'artist');
+module.exports = mongoose.model('artist', artistSchema);

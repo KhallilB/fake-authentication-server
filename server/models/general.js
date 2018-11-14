@@ -8,4 +8,4 @@ const generalSchema = new Schema ({
     description: String
 });
 
-module.exports = mongoose.model('general', generalSchema, 'general')
+module.exports = mongoose.model('general', generalSchema)

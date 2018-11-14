@@ -1,14 +1,22 @@
+//DEPENDENCIES
 const express = require('express');
 const bodyParser = require('body-parser');
-const moongoose =  require('mongoose');
+const mongoose =  require('mongoose');
 
+//PORT
 const port =  3000;
-const api = require('./routes/api');
+
+//ROUTES
+const artist = require('./routes/artist');
+const general = require('./routes/general');
+
 const app = express();
+
 
 app.use(bodyParser.json());
 
-app.use('/api', api);
+app.use('/artist', artist);
+app.use('/general', general);
 
 app.get('/', (req, res) => {
     res.send('Fake Server Working!');
