@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const ArtistSchema = new Schema ({
+const artistSchema = new Schema ({
     email: String,
     password: String,
     artist_name: String,
@@ -9,3 +9,5 @@ const ArtistSchema = new Schema ({
     location: String,
     age: Number
 });
+
+module.exports = mongoose.model('artist', artistSchema, 'artist');
